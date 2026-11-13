@@ -3,5 +3,8 @@
   "python.terminal.activateEnvironment": true,
   "files.encoding": "utf8",
   "terminal.integrated.env.windows": {"PYTHONIOENCODING": "utf-8"},
-  "python.analysis.extraPaths": ["anomaly-advanced/src"]
+  "python.analysis.extraPaths": [
+    "anomaly-advanced/src"
+  ],
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }
