@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(ROOT, "anomaly-basic"))
 from main import (calc_mean, calc_median, calc_std, filter_anomalies,  # noqa: E402
                   generate_pressure_series)
 
-N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 5
+N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 10
 series, T_MIN, T_MAX = generate_pressure_series(N)
 SPIKE, DIP = 8, 3  # индексы: 9-й и 4-й час
 
