@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {"id": "studentN", "type": "promptString", "description": "Ваш номер по журналу N", "default": "5"}
+  ],
+  "tasks": [
+    {
+      "label": "ЛР5: Вариант А",
+      "type": "shell",
+      "command": "python anomaly-basic/main.py ${input:studentN}",
+      "presentation": {"reveal": "always", "panel": "dedicated", "clear": true},
+      "problemMatcher": []
+    },
+    {
+      "label": "ЛР5: Вариант Б",
+      "type": "shell",
+      "command": "python -m telemetry_cleaner.main ${input:studentN}",
+      "options": {"env": {"PYTHONPATH": "${workspaceFolder}/anomaly-advanced/src"}},
+      "presentation": {"reveal": "always", "panel": "dedicated", "clear": true},
+      "problemMatcher": []
+    },
+    {
+      "label": "ЛР5: Упражнения 1-7",
+      "type": "shell",
+      "command": "python exercises/exercises.py ${input:studentN}",
+      "presentation": {"reveal": "always", "panel": "dedicated", "clear": true},
+      "problemMatcher": []
+    },
+    {
+      "label": "ЛР5: АВТОЗАПУСК (А + Б)",
+      "dependsOn": ["ЛР5: Вариант А", "ЛР5: Вариант Б"],
+      "dependsOrder": "sequence",
+      "runOptions": {"runOn": "folderOpen"},
+      "problemMatcher": []
+    }
+  ]
+}

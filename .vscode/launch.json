@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name": "Вариант А", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/anomaly-basic/main.py", "args": ["5"], "console": "integratedTerminal"},
+    {"name": "Вариант Б", "type": "debugpy", "request": "launch",
+     "module": "telemetry_cleaner.main", "args": ["5"],
+     "env": {"PYTHONPATH": "${workspaceFolder}/anomaly-advanced/src"}, "console": "integratedTerminal"},
+    {"name": "Упражнения 1-7", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/exercises/exercises.py", "args": ["5"], "console": "integratedTerminal"}
+  ]
+}
