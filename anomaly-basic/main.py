@@ -73,7 +73,7 @@ def main() -> None:
     print("=" * 68)
     raw_n = sys.argv[1] if len(sys.argv) > 1 else input("Введите ваш номер по журналу N: ")
     raw_n = raw_n.strip()
-    student_n = int(raw_n) if raw_n.isdigit() and int(raw_n) > 0 else 5
+    student_n = int(raw_n) if raw_n.isdigit() and int(raw_n) > 0 else 10
     print(f"N = {student_n}")
 
     pressures, tech_min, tech_max = generate_pressure_series(student_n)
