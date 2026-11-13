@@ -2,8 +2,8 @@
 
 Запуск: откройте папку проекта в VS Code → разрешите автоматические задачи → введите N.
 Вручную: `Ctrl+Shift+P → Tasks: Run Task`, либо
-`python anomaly-basic/main.py 5`, `python exercises/exercises.py 5`,
-`$env:PYTHONPATH="anomaly-advanced/src"; python -m telemetry_cleaner.main 5`.
+`python anomaly-basic/main.py 10`, `python exercises/exercises.py 10`,
+`$env:PYTHONPATH="anomaly-advanced/src"; python -m telemetry_cleaner.main 10`.
 
 ## Алгоритм
 1. Генерация ряда по N → 2. mean, median, σ → 3. проверка каждой точки (enumerate) →
@@ -15,7 +15,7 @@
 - Q1, Q3 — медианы младшей/старшей половин отсортированной копии; IQR = Q3 − Q1
 - Тьюки: [Q1 − 1.5·IQR; Q3 + 1.5·IQR]
 
-## Пример (вариант А, N = 5)
+## Пример (вариант А, N = 10)
 Ряд: [170, 172, 168, 134, 174, 170, 166, 172, 214, 168, 172, 174]
 mean = 171.17; Σ(P−mean)² = 3283.67; D = 273.64; σ = 16.54;
 границы 2σ: [138.08; 204.25]; выбросы: час 4 (z = 2.25), час 9 (z = 2.59).
